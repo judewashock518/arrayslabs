@@ -207,6 +207,13 @@ console.log("Dishes with tomato and cheese: ", tomatoandcheese);
 //6. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
 
+function getCuisineTypes (dishes) {
+  return dishes.map(dish => dish.cuisine).filter((cuisine, index, self) => self.indexOf(cuisine) === index)
+}
+
+let cuisinetypes = getCuisineTypes (dishes);
+console.log("Cuisine types: ", cuisinetypes);
+
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map
 
