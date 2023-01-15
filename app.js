@@ -228,6 +228,13 @@ console.log("Modified dishes: ", typetoname);
 //This function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
 
+function appendCuisineAndFilterVegetarian(dishes, cuisine) {
+  return dishes.map(dish => `${dish.cuisine} ${dish.name}`).filter((cuisine === "vegetarian"));
+}
+
+let vegetariandishes = appendCuisineAndFilterVegetarian (dishes);
+console.log("Vegetarian dishes: ", vegetariandishes);
+
 // <<<<<<<<<<<<<<<<< BONUS <<<<<<<<<<<<<<<<<
 //9. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not need to check the array's indexes to find out what the array INCLUDES.
